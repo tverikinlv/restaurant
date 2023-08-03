@@ -48,10 +48,6 @@
         line-height: 40px;
         letter-spacing: 5.88px;
     }
-
-    @media (max-width: $mobile-size) {
-        width: 100%;
-    }
 }
 
 .swiper{
@@ -74,7 +70,7 @@
     color:var(--swiper-navigation-color,var(--swiper-theme-color));
 
     @media (max-width: $mobile-size) {
-        bottom: 100px;
+        bottom: 140px;
         top: unset;
     }
 }
