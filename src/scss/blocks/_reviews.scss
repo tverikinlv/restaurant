@@ -1,0 +1,115 @@
+.reviews {
+    position: relative;
+    background-color: var(--accent-bg);
+    padding-top: 219px;
+    padding-bottom: 220px;
+
+    font-size: 16px;
+
+    @media (max-width: $mobile-size) {
+        font-size: 12px;
+    }
+    z-index: 0;
+}
+
+.review {
+    text-align: center;    
+    margin: 0 auto;
+    max-width: 785px;
+
+    h3 {
+        padding-top: 34px;
+        padding-bottom: 20px;
+        color: #D3B47F;
+        text-align: center;
+        font-family: var(--text-color-accent);
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 40px;
+    }
+
+    p {
+        padding-bottom: 40px;
+
+        color: #FFF;
+        text-align: center;
+        font-family: var(--font-main);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 37px;
+    }
+
+    span {
+        color: var(--text-color-accent);
+        text-align: center;
+        font-family: var(--font-main);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 40px;
+        letter-spacing: 5.88px;
+    }
+
+    @media (max-width: $mobile-size) {
+        width: 100%;
+    }
+}
+
+.swiper{
+    @media (max-width: $mobile-size) {
+        position: unset;
+    }
+}
+
+.swiper-button-next, .swiper-button-prev {
+    position:absolute;
+    top:var(--swiper-navigation-top-offset,50%);
+    width:calc(var(--swiper-navigation-size)/ 44 * 27);
+    height:var(--swiper-navigation-size);
+    margin-top:calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index:10;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--swiper-navigation-color,var(--swiper-theme-color));
+
+    @media (max-width: $mobile-size) {
+        bottom: 100px;
+        top: unset;
+    }
+}
+
+.swiper-button-next {
+    @media (max-width: $mobile-size) {
+        right: 70px;
+    }
+}
+
+.swiper-button-prev {
+    @media (max-width: $mobile-size) {
+        left: 70px;
+    }
+}
+
+
+.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
+    cursor:auto;
+    pointer-events:none;
+}
+
+.swiper-button-next.swiper-button-disabled:after {
+    content: url('../img/arrow-right-disabled.svg');
+}
+
+.swiper-button-prev.swiper-button-disabled:after {
+    content: url('../img/arrow-left-disabled.svg');
+}
+
+.swiper-button-prev:after,.swiper-rtl .swiper-button-next:after {
+    content: url('../img/arrow-left.svg');
+}
+
+.swiper-button-next:after,.swiper-rtl .swiper-button-prev:after {
+    content: url('../img/arrow-right.svg'); 
+}
